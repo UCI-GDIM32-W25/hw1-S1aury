@@ -24,19 +24,19 @@ public class Player : MonoBehaviour
     {   
         Vector3 CurrentPosition = transform.position;
         //define CurrentPisition as the place where Player object now is
-        if(Input.GetKey(KeyCode.W))
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 CurrentPosition.y += _speed * Time.deltaTime;
             }
-        if(Input.GetKey(KeyCode.S))
+        if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 CurrentPosition.y -= _speed * Time.deltaTime;
             }
-        if(Input.GetKey(KeyCode.A))
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 CurrentPosition.x -= _speed * Time.deltaTime;
             }
-        if(Input.GetKey(KeyCode.D))
+        if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 CurrentPosition.x += _speed * Time.deltaTime;
             }
