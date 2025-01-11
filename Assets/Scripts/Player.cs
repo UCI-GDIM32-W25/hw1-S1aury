@@ -17,7 +17,9 @@ public class Player : MonoBehaviour
     {
       _numSeedsLeft = 5;
       _numSeedsPlanted = 0;
+      //initialize the seeds left and planted
       _plantCountUI.UpdateSeeds(_numSeedsLeft,_numSeedsPlanted);
+      //send back the changes of seeds to plantcountUI
     }
 
     private void Update()
@@ -53,12 +55,13 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && _numSeedsLeft > 0)
             {   
-                 Debug.Log("PlantSeed called"); 
                 Instantiate(_plantPrefab, transform.position, Quaternion.identity);
+                //instantiate a seeds at the position where player is
                 _numSeedsLeft -= 1;
                 _numSeedsPlanted +=1;
+                //counting the seeds left and planted
                 _plantCountUI.UpdateSeeds(_numSeedsLeft,_numSeedsPlanted);
-               
+                //upload the seeds information back to UpdateSeeds UI to show
             }
     }
 }

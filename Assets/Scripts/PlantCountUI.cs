@@ -10,5 +10,6 @@ public class PlantCountUI : MonoBehaviour
     {
         _plantedText.text = "Seeds Planted: " + seedsPlanted;
         _remainingText.text = "Seeds Remaining: " + seedsLeft;
+        //show seedsremaining and seedsplanted by TMP
     }
 }
