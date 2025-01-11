@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &179384847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &543629223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -492,6 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 935932060}
   - component: {fileID: 935932059}
+  - component: {fileID: 935932061}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -566,6 +567,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &935932061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935932057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78692814429bd4f79a92be7f923fb9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
+  _playerTransform: {fileID: 935932060}
+  _plantPrefab: {fileID: 6050129337346497789, guid: 2b11823a53f5a42e8824f92718cb0d65, type: 3}
+  _numSeeds: 5
+  _plantCountUI: {fileID: 1327915578}
 --- !u!1 &1167303336
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +729,7 @@ GameObject:
   - component: {fileID: 1327915577}
   - component: {fileID: 1327915576}
   - component: {fileID: 1327915575}
+  - component: {fileID: 1327915578}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -768,6 +787,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1327915578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327915574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eebc7c403a9d34bf6ac89b8e35043f21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _plantedText: {fileID: 1167303338}
+  _remainingText: {fileID: 1554837977}
 --- !u!1 &1554837975
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 166.65768, y: -86}
+  m_AnchoredPosition: {x: 163.1, y: -114.1}
   m_SizeDelta: {x: 299.353, y: 47.27899}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554837977

@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {   
-        UnityEngine.Vector3 CurrentPosition = transform.position;
+        Vector3 CurrentPosition = transform.position;
         //define CurrentPisition as the place where Player object now is
         if(Input.GetKey(KeyCode.W))
             {
@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
                 _numSeedsLeft -= 1;
                 _numSeedsPlanted +=1;
                 _plantCountUI.UpdateSeeds(_numSeedsLeft,_numSeedsPlanted);
+                Debug.Log($"PlantSeed called. Seeds Left: {_numSeedsLeft}, Seeds Planted: {_numSeedsPlanted}");
             }
     }
 }
