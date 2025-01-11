@@ -40,6 +40,10 @@ public class Player : MonoBehaviour
             {
                 CurrentPosition.x += _speed * Time.deltaTime;
             }
+        if (Input.GetKeyDown(KeyCode.Space))
+            {
+                PlantSeed();
+            }
         //when player press the button, make Player Object move by _speed * deltaTime
         transform.position = CurrentPosition;
         //send back the position changes to Value CurrenPosition
@@ -48,12 +52,13 @@ public class Player : MonoBehaviour
     public void PlantSeed ()
     {
         if(Input.GetKeyDown(KeyCode.Space) && _numSeedsLeft > 0)
-            {
+            {   
+                 Debug.Log("PlantSeed called"); 
                 Instantiate(_plantPrefab, transform.position, Quaternion.identity);
                 _numSeedsLeft -= 1;
                 _numSeedsPlanted +=1;
                 _plantCountUI.UpdateSeeds(_numSeedsLeft,_numSeedsPlanted);
-                Debug.Log($"PlantSeed called. Seeds Left: {_numSeedsLeft}, Seeds Planted: {_numSeedsPlanted}");
+               
             }
     }
 }
