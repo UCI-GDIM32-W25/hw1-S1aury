@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Player : MonoBehaviour
     {
       _numSeedsLeft = 5;
       _numSeedsPlanted = 0;
-      
+      _plantCountUI.UpdateSeeds(_numSeedsLeft,_numSeedsPlanted);
     }
 
     private void Update()
@@ -46,6 +47,12 @@ public class Player : MonoBehaviour
 
     public void PlantSeed ()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space) && _numSeedsLeft > 0)
+            {
+                Instantiate(_plantPrefab, transform.position, Quaternion.identity);
+                _numSeedsLeft -= 1;
+                _numSeedsPlanted +=1;
+                _plantCountUI.UpdateSeeds(_numSeedsLeft,_numSeedsPlanted);
+            }
     }
 }
